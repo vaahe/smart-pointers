@@ -5,8 +5,7 @@
 - [Introduction](#introduction)
 - [Features](#features)
 - [Smart Pointer Types](#smart-pointer-types)
-- [Installation](#installation)
-- [Usage](#usage)
+- [Installation and Usage](#installation)
 
 ## Introduction
 
@@ -34,7 +33,7 @@ benefits and applications.
 3. **std::weak_ptr** - Works with `shared_ptr` to break circular references by
    holding a weak reference that does not affect the reference count.
 
-## Installation
+## Installation and Usage
 
 To use this project, you need a C++ compiler that supports C++11 or newer.
 
@@ -48,13 +47,13 @@ To use this project, you need a C++ compiler that supports C++11 or newer.
    ```
 3. Compile the code:
 
-   ### On Windows
+   #### On Windows
 
    ```bash
    ./run.bat
    ```
 
-   ### On Linux/macOS
+   #### On Linux/macOS
 
    ```bash
    chmod +x run.sh
@@ -65,11 +64,3 @@ To use this project, you need a C++ compiler that supports C++11 or newer.
    ```bash
    ./run.sh
    ```
-
-## Usage
-
-Run the compiled program:
-
-```bash
-./smart_pointers
-```
