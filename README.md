@@ -47,8 +47,23 @@ To use this project, you need a C++ compiler that supports C++11 or newer.
    cd smart-pointers
    ```
 3. Compile the code:
+
+   ### On Windows
+
    ```bash
-   g++ -std=c++11 main.cpp -o smart_pointers
+   ./run.bat
+   ```
+
+   ### On Linux/macOS
+
+   ```bash
+   chmod +x run.sh
+   ```
+
+   then run the following command:
+
+   ```bash
+   ./run.sh
    ```
 
 ## Usage
