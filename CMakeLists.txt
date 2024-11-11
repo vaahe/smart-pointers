@@ -3,8 +3,7 @@ project(smart-pointers)
 
 set(CMAKE_CXX_STANDARD 11)
 
-# Include the shared_ptr directory
 include_directories(shared_ptr)
+set(SOURCE_FILES main.cpp)
 
-# Add the main executable and source files
-add_executable(smart_pointers main.cpp shared_ptr/shared_ptr.cpp)
+add_executable(smart_pointers ${SOURCE_FILES})
