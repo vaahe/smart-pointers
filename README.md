@@ -5,7 +5,7 @@
 - [Introduction](#introduction)
 - [Features](#features)
 - [Smart Pointer Types](#smart-pointer-types)
-- [Installation and Usage](#installation)
+- [Installation and Usage](#installation-and-usage)
 
 ## Introduction
 
