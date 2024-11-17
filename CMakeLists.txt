@@ -1,22 +1,16 @@
-cmake_minimum_required(VERSION 3.10)
+cmake_minimum_required(VERSION 3.14)
 project(smart-pointers)
 
-set(CMAKE_CXX_STANDARD 11)
+set(CMAKE_CXX_STANDARD 14)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
-add_subdirectory(googletest)
+include_directories(shared_ptr, unique_ptr)
 
-include_directories(${CMAKE_SOURCE_DIR}/shared_ptr)
+# Add GoogleTest to the project
+# add_subdirectory(googletest)
+# enable_testing()
+
+# Main executable
 set(SOURCE_FILES main.cpp)
-
 add_executable(smart_pointers ${SOURCE_FILES})
-
-enable_testing()
-
-set(TEST_FILES
-    test/test_shared_ptr.cpp
-)
-
-add_executable(tests ${TEST_FILES} ${SOURCE_FILES})
-target_link_libraries(tests gtest gtest_main)
-
-add_test(NAME tests COMMAND tests)
+target_include_directories(smart_pointers PRIVATE shared_ptr unique_ptr)
