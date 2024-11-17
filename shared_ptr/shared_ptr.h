@@ -16,7 +16,7 @@ public:
 
 public:
     T *get() const;
-    void reset(T* ptr = nullptr);
+    void reset(T *ptr = nullptr);
 
     // accessors
     T &operator*() const;
@@ -27,10 +27,7 @@ public:
     SharedPtr &operator=(SharedPtr<T> &&other);
 
     // utilities
-    uint count() const
-    {
-        return m_ref_count ? *m_ref_count : 0;
-    }
+    uint use_count() const;
 
 private:
     void release();
@@ -42,4 +39,4 @@ private:
 
 #include "shared_ptr.tpp"
 
-#endif // !SHRED_PTR_H
+#endif // !SHARED_PTR_H

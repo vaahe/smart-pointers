@@ -57,8 +57,10 @@ SharedPtr<T> &SharedPtr<T>::operator=(SharedPtr &&other)
     if (this != &other)
     {
         release();
+        
         m_ptr = other.m_ptr;
         m_ref_count = other.m_ref_count;
+
         other.m_ptr = nullptr;
         other.m_ref_count = nullptr;
     }
@@ -104,4 +106,10 @@ void SharedPtr<T>::reset(T *ptr)
 
     m_ptr = nullptr;
     m_ref_count = new uint(ptr ? 1 : 0);
+}
+
+template <typename T>
+uint SharedPtr<T>::use_count() const
+{
+    return m_ref_count ? *m_ref_count : 0;
 }
